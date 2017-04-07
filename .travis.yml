@@ -43,7 +43,5 @@ before_install:
 install:
   - php -n -d memory_limit=-1 composer install
   - test "$SYMFONY_VERSION" -eq 3 || php -n -d memory_limit=-1 composer update --prefer-lowest
-  - rm -rf vendor/pomm-project/pomm-bundle
-  - ln -s ../../../ vendor/pomm-project/pomm-bundle
 
 script: ./bin/behat
